@@ -1,28 +1,58 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import { Nav, Navbar, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <Header/>
+        
+          <h1>Caloteiro</h1>
+       
       </div>
     );
   }
 }
 
+
+class Header extends Component{
+  render(){
+
+    return(
+      
+      <Nav
+      activeKey="/home"
+      onSelect={selectedKey => alert(`selected ${selectedKey}`)}
+    >
+      <Nav.Item>
+        <Nav.Link href="/home">Active</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-2">Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="disabled" disabled>
+          Disabled
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+
+
+
+
+    );
+
+  }
+
+
+}
+
+
 export default App;
+
+
