@@ -1,1 +1,1 @@
-﻿<img src ="img/caloteiro.jpg"></img>
+﻿<img src ="public/img/caloteiro.jpg"></img>
