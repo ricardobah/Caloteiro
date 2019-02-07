@@ -12,8 +12,8 @@ class App extends Component {
            
         <div className="App">
             <MainHeader/>
-            <Route exact path ='/' component={"MainHeader"}/> 
-            <Table></Table>
+            <Route exact path ='/home' component={Table}/> 
+            
         
         </div>
    
@@ -35,7 +35,7 @@ class MainHeader extends Component{
       <Nav.Item>
         <button >
           
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/home">Home</Nav.Link>
         </button>
       </Nav.Item>
       <Nav.Item>
