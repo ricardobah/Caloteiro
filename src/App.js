@@ -31,33 +31,34 @@ class MainHeader extends Component{
       <Nav
        activeKey="/"
        onSelect={""}
+       style={ul}
       >
-      <Nav.Item>
-        <button >
+      <Nav.Item style={li}>
+        
           
           <Nav.Link href="/home">Home</Nav.Link>
-        </button>
+       
       </Nav.Item>
-      <Nav.Item>
-      <button >
-        <Nav.Link href="/pagamentos">Pagamentos</Nav.Link>   </button >
+      <Nav.Item style={li}>
+    
+        <Nav.Link href="/pagamentos">Pagamentos</Nav.Link>   
       </Nav.Item>
-      <Nav.Item>
-      <button >
+      <Nav.Item style={li}>
+    
         <Nav.Link href="/compras">Compras</Nav.Link>
-        </button >
+        
       </Nav.Item>
-      <Nav.Item>
-      <button >
+      <Nav.Item style={li}>
+    
         <Nav.Link href="/solicitacos">Solicitações</Nav.Link>
-        </button >
+        
       </Nav.Item>
-      <Nav.Item>
-      <button >
+      <Nav.Item style={li}>
+    
         <Nav.Link eventKey="disabled" disabled>
           Estoque
         </Nav.Link>
-        </button >
+        
       </Nav.Item>
     </Nav>
 
@@ -70,6 +71,37 @@ class MainHeader extends Component{
 
 
 }
+
+
+
+
+const ul = {
+ "list-style-type": "none",
+  "margin": "0",
+  "padding": "0",
+  "overflow": "hidden",
+  "background-color": "#333"
+}
+
+const li = {
+  "float": "left",
+  "display": "block",
+  "color": "white",
+  "text-align": "center",
+  "padding": "14px 16px",
+  "text-decoration": "none"
+}
+
+const a = {
+  "display": "block",
+  "color": "white",
+  "text-align": "center",
+  "padding": "14px 16px",
+  "text-decoration": "none"
+}
+
+
+
 
 
 export default App;
