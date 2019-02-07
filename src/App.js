@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router'
-import { Nav } from 'react-bootstrap';
+import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
+import { Nav, Button } from 'react-bootstrap';
 import './App.css';
-
+import {Table} from './table.js'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <MainHeader/>
-         {/* <Route exact path ='/' component={MainHeader}/> */}
-          <h1>Caloteiro</h1>
+      <Router>
        
-      </div>
+          
+           
+        <div className="App">
+            <MainHeader/>
+            <Route exact path ='/' component={"MainHeader"}/> 
+            <Table></Table>
+        
+        </div>
+   
+      </Router>
     );
   }
 }
@@ -27,22 +29,35 @@ class MainHeader extends Component{
     return(
       
       <Nav
-       activeKey="/home"
-       onSelect={selectedKey => alert(`selected ${selectedKey}`)}
+       activeKey="/"
+       onSelect={""}
       >
       <Nav.Item>
-        <Nav.Link href="/home">Active</Nav.Link>
+        <button >
+          
+          <Nav.Link href="/">Home</Nav.Link>
+        </button>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Link</Nav.Link>
+      <button >
+        <Nav.Link href="/pagamentos">Pagamentos</Nav.Link>   </button >
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-2">Link</Nav.Link>
+      <button >
+        <Nav.Link href="/compras">Compras</Nav.Link>
+        </button >
       </Nav.Item>
       <Nav.Item>
+      <button >
+        <Nav.Link href="/solicitacos">Solicitações</Nav.Link>
+        </button >
+      </Nav.Item>
+      <Nav.Item>
+      <button >
         <Nav.Link eventKey="disabled" disabled>
-          Disabled
+          Estoque
         </Nav.Link>
+        </button >
       </Nav.Item>
     </Nav>
 
