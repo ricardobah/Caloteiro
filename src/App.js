@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-
-import { Nav, Navbar, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import { Nav } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <Header/>
-        
+          <MainHeader/>
+          <Route exact path ='/' component={MainHeader}/>
           <h1>Caloteiro</h1>
        
       </div>
@@ -17,15 +21,15 @@ class App extends Component {
 }
 
 
-class Header extends Component{
+class MainHeader extends Component{
   render(){
 
     return(
       
       <Nav
-      activeKey="/home"
-      onSelect={selectedKey => alert(`selected ${selectedKey}`)}
-    >
+       activeKey="/home"
+       onSelect={selectedKey => alert(`selected ${selectedKey}`)}
+      >
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
       </Nav.Item>
