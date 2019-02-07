@@ -11,7 +11,9 @@ render(){
       
     return(
         <div>
+            <br/>
             <h2>Caloteiros</h2>
+            <br/>
             <Table/>
         </div>
     );

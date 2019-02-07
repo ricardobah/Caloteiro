@@ -32,7 +32,7 @@ render(){
 <thead >
 
   <tr>
-    <th style = {thd}>Nome</th>
+    <th  style = {thd}>Nome</th>
    
     <th style = {thd}>Pagamento</th>
     <th style = {thd}>Serasa</th>
@@ -42,20 +42,20 @@ render(){
 
   <tr>
 
-    <td>  <font size="3" color="black">Anderson</font></td>
+    <td>  <font size="3" color="green">Cabeça</font></td>
  
-    <td>  <font size="3" color="black">50</font></td>
-    <td>  <font size="3" color="black">20</font></td>
+    <td>  <font size="3" color="green">-100</font></td>
+    <td>  <span class="glyphicon glyphicon-play text-success">Pago</span></td>
   </tr>
   <tr>
-  <td>  <font size="3" color="black">Anderson</font></td>
-  <td>  <font size="3" color="black">1</font></td>
-  <td>  <font size="3" color="black">2</font></td>
+  <td>  <font size="3" color="red">Anderson</font></td>
+  <td>  <font size="3" color="red">15</font></td>
+  <td>  <span class="glyphicon glyphicon-play text-danger">Caloteiro!</span></td>
   </tr>
   <tr>
-  <td>  <font size="3" color="black">Anderson</font></td>
-  <td>  <font size="3" color="black">11</font></td>
-  <td>  <font size="3" color="black">2</font></td>
+  <td>  <font size="3" color="green">Ricardo</font></td>
+  <td>  <font size="3" color="green">0</font></td>
+  <td>  <span class="glyphicon glyphicon-play text-success">Pago</span></td>
   </tr>
 </tfoot>
 </table>
