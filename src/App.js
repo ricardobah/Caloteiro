@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
+} from 'react-router'
 import { Nav } from 'react-bootstrap';
 import './App.css';
 
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
           <MainHeader/>
-          <Route exact path ='/' component={MainHeader}/>
+         {/* <Route exact path ='/' component={MainHeader}/> */}
           <h1>Caloteiro</h1>
        
       </div>

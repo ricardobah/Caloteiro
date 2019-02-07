@@ -1,1 +1,1 @@
-﻿Pagar o café
+﻿<img src ="img/caloteiro.jpg"></img>
