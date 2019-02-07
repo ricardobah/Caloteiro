@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 import { Nav, Button } from 'react-bootstrap';
 import './App.css';
-import {Table} from './table.js'
+import {Home} from './home.js'
 class App extends Component {
   render() {
     return (
@@ -12,7 +12,9 @@ class App extends Component {
            
         <div className="App">
             <MainHeader/>
-            <Route exact path ='/home' component={Table}/> 
+            <br/>
+            <br/>
+            <Route exact path ='/home' component={Home}/> 
             
         
         </div>
@@ -34,7 +36,7 @@ class MainHeader extends Component{
        style={ul}
       >
       <Nav.Item style={li}>
-        
+      
           
           <Nav.Link href="/home">Home</Nav.Link>
        

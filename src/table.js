@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import './table.css'
 
 class Table extends Component{
 
@@ -19,7 +19,7 @@ render(){
        
       };
       const thd = {
-        'background-color': '#4CAF50',
+        
         'color': 'white'
       }
 
@@ -27,27 +27,37 @@ render(){
       
     return(
 <div style={ divStyle}>
-<table className="col-8" >
+<table className="col-8" className="blueTable" >
+<thead >
+
   <tr>
     <th style = {thd}>Nome</th>
    
     <th style = {thd}>Pagamento</th>
+    <th style = {thd}>Serasa</th>
   </tr>
+</thead>
+<tfoot>
+
   <tr>
-    <td>Jill</td>
+    <td>Anderson</td>
     
+    <td>50</td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Eve</td>
+    <td>Naila</td>
     
     <td>94</td>
+    <td>50</td>
   </tr>
   <tr>
-    <td>John</td>
+    <td>Joaci</td>
    
     <td>80</td>
+    <td>50</td>
   </tr>
+</tfoot>
 </table>
 </div>
 
