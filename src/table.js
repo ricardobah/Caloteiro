@@ -27,6 +27,7 @@ render(){
       
     return(
 <div style={ divStyle}>
+
 <table className="col-8" className="blueTable" >
 <thead >
 
@@ -40,22 +41,21 @@ render(){
 <tfoot>
 
   <tr>
-    <td>Anderson</td>
-    
-    <td>50</td>
-    <td>50</td>
+
+    <td>  <font size="3" color="black">Anderson</font></td>
+ 
+    <td>  <font size="3" color="black">50</font></td>
+    <td>  <font size="3" color="black">20</font></td>
   </tr>
   <tr>
-    <td>Naila</td>
-    
-    <td>94</td>
-    <td>50</td>
+  <td>  <font size="3" color="black">Anderson</font></td>
+  <td>  <font size="3" color="black">1</font></td>
+  <td>  <font size="3" color="black">2</font></td>
   </tr>
   <tr>
-    <td>Joaci</td>
-   
-    <td>80</td>
-    <td>50</td>
+  <td>  <font size="3" color="black">Anderson</font></td>
+  <td>  <font size="3" color="black">11</font></td>
+  <td>  <font size="3" color="black">2</font></td>
   </tr>
 </tfoot>
 </table>

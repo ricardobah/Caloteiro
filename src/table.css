@@ -56,6 +56,6 @@ table.blueTable {
     border-radius: 5px;
   }
 
-  thred {
-    background-color: #333; color: #E9E9F1
+  th,td {
+  text-align: center
   }
