@@ -45,17 +45,17 @@ render(){
     <td>  <font size="3" color="green">Cabeça</font></td>
  
     <td>  <font size="3" color="green">-100</font></td>
-    <td>  <span class="glyphicon glyphicon-play text-success">Pago</span></td>
+    <td>  <span className="glyphicon glyphicon-play text-success">Pago</span></td>
   </tr>
   <tr>
   <td>  <font size="3" color="red">Anderson</font></td>
   <td>  <font size="3" color="red">15</font></td>
-  <td>  <span class="glyphicon glyphicon-play text-danger">Caloteiro!</span></td>
+  <td>  <span className="glyphicon glyphicon-play text-danger">Caloteiro!</span></td>
   </tr>
   <tr>
   <td>  <font size="3" color="green">Ricardo</font></td>
   <td>  <font size="3" color="green">0</font></td>
-  <td>  <span class="glyphicon glyphicon-play text-success">Pago</span></td>
+  <td>  <span className="glyphicon glyphicon-play text-success">Pago</span></td>
   </tr>
 </tfoot>
 </table>

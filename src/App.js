@@ -3,6 +3,7 @@ import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 import { Nav, Button } from 'react-bootstrap';
 import './App.css';
 import {Home} from './home.js'
+
 class App extends Component {
   render() {
     return (
