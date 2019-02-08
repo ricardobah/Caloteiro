@@ -14,7 +14,7 @@ class App extends Component {
             <MainHeader/>
             
             <Route exact path ='/home' component={Home}/> 
-            
+            <Route exact path ='/' component={Home}/>
         
         </div>
    
