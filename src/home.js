@@ -5,9 +5,29 @@ import './home.css'
 
 
 class Home extends Component{
-
+    constructor(props){
+        super(props)
     
-      
+        this.state = {
+          isLoading: false,  
+          month : "Selecione um Mês",
+          year : "Selecione um Ano"
+        
+        }
+    }
+       setStateMonth(asd){
+       console.log(asd);
+        this.setState({
+            month:asd
+        });
+    }
+
+    setStateYear(asd){
+        console.log(asd);
+         this.setState({
+             year:asd
+         });
+     }
 
     render(){
 
@@ -26,12 +46,15 @@ class Home extends Component{
                     title="Ano"
                     id="input-group-dropdown-1"
                     >
-                    <Dropdown.Item href="#">2018</Dropdown.Item>
-                    <Dropdown.Item href="#">2019</Dropdown.Item>
-                    <Dropdown.Item href="#">2020</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>this.setStateYear("2018")} >2018</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>this.setStateYear("2019")} >2019</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>this.setStateYear("2020")} >2020</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>this.setStateYear("2021")} >2021</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>this.setStateYear("2022")} >2022</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>this.setStateYear("2023")} >2023</Dropdown.Item>
                    
                     </DropdownButton>
-                <FormControl aria-describedby="basic-addon1"  placeholder="Selecione um Ano"/>
+                <FormControl aria-describedby="basic-addon1"  placeholder={this.state.year}/>
                 &nbsp;&nbsp;&nbsp;
                 <DropdownButton
                     as={InputGroup.Prepend}
@@ -39,21 +62,21 @@ class Home extends Component{
                     title="Mês"
                     id="input-group-dropdown-1"
                     >
-                        <Dropdown.Item href="#/action-1">Janeiro</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Fevereiro</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Março</Dropdown.Item>
-                        <Dropdown.Item href="#/action-1">Abril</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Maio</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Junho</Dropdown.Item>
-                        <Dropdown.Item href="#/action-1">Julho</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Agosto</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Setembro</Dropdown.Item>
-                        <Dropdown.Item href="#/action-1">Outubro</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Novembro</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Dezembro</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Janeiro")}  >Janeiro</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Fevereiro")}>Fevereiro</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Março")} >Março</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Abril")} >Abril</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Maio")} >Maio</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Junho")} >Junho</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Julho")} >Julho</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Agosto")} >Agosto</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Setembro")} >Setembro</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Outubro")} >Outubro</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Novembro")} >Novembro</Dropdown.Item>
+                        <Dropdown.Item onClick={()=>this.setStateMonth("Dezembro")} >Dezembro</Dropdown.Item>
                     </DropdownButton>
                     <FormControl
-                    placeholder="Selecioneum Mês"
+                    placeholder={this.state.month}
                     
                     aria-describedby="basic-addon1"
                     />
