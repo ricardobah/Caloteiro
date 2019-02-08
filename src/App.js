@@ -3,29 +3,24 @@ import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 import { Nav, Button } from 'react-bootstrap';
 import './App.css';
 import {Home} from './home.js'
-
+import {Pagamento} from './pagamentos.js'
 class App extends Component {
   render() {
     return (
       <Router>
-       
-          
-           
         <div className="App">
             <MainHeader/>
-            
-            <Route exact path ='/home' component={Home}/> 
             <Route exact path ='/' component={Home}/>
-        
+            <Route exact path ='/home' component={Home}/> 
+            <Route exact path ='/pagamentos' component={Pagamento}/> 
         </div>
-   
       </Router>
     );
   }
 }
 
-
 class MainHeader extends Component{
+
   render(){
 
     return(
@@ -36,24 +31,16 @@ class MainHeader extends Component{
        style={ul}
       >
       <Nav.Item style={li}>
-      
-          
-          <Nav.Link href="/home">Home</Nav.Link>
-       
+          <Nav.Link href="/home">Home</Nav.Link>     
       </Nav.Item>
-      <Nav.Item style={li}>
-    
+      <Nav.Item style={li}>  
         <Nav.Link href="/pagamentos">Pagamentos</Nav.Link>   
       </Nav.Item>
       <Nav.Item style={li}>
-    
-        <Nav.Link href="/compras">Compras</Nav.Link>
-        
+        <Nav.Link href="/compras">Compras</Nav.Link>       
       </Nav.Item>
       <Nav.Item style={li}>
-    
-        <Nav.Link href="/solicitacos">Solicitações</Nav.Link>
-        
+        <Nav.Link href="/solicitacos">Solicitações</Nav.Link>     
       </Nav.Item>
       <Nav.Item style={li}>
     
