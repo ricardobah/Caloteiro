@@ -4,6 +4,7 @@ import { Nav, Button } from 'react-bootstrap';
 import './App.css';
 import {Home} from './home.js'
 import {Pagamento} from './pagamentos.js'
+import {Compras} from './CadastroCompras.js'
 class App extends Component {
   render() {
     return (
@@ -13,6 +14,7 @@ class App extends Component {
             <Route exact path ='/' component={Home}/>
             <Route exact path ='/home' component={Home}/> 
             <Route exact path ='/pagamentos' component={Pagamento}/> 
+            <Route exact path ='/compras' component={Compras}/> 
         </div>
       </Router>
     );

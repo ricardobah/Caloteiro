@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './switch.css'
-class Pagamento extends Component{
+class Compras extends Component{
     constructor(props){
         super(props)
     
@@ -16,12 +16,12 @@ class Pagamento extends Component{
 
             <div>
                 <br/>
-                    <h2>Receita Federal</h2>
+                    <h2>Compras</h2>
                 <br/>
             <form action="/home"> 
             {/* lembrar do post e name dos inputs */}
             <div className="divisao_input">
-                <label>Nome: &nbsp;</label>
+                <label>Responsável: &nbsp;</label>
                 <div className="form-group forf">
                     <InputGroup className="mb-3 col-md-3 ">
                         <FormControl aria-describedby="basic-addon1"  placeholder="Nome"/>
@@ -37,9 +37,10 @@ class Pagamento extends Component{
                 </div>
             </div>
             <div className="divisao_input">
-                <label>Data: &nbsp;</label>
+                <label>Data (TROCAR POR DATE PICKER): &nbsp;</label>
                 <div className="form-group forf">
-                    <InputGroup className="mb-3 col-md-4 ">
+                    <InputGroup className="mb-3 col-md-6 ">
+                    
                         <DropdownButton as={InputGroup.Prepend} variant="outline-secondary"  title="Ano" id="input-group-dropdown-1" >
                             <Dropdown.Item  >2018</Dropdown.Item>
                             <Dropdown.Item  >2019</Dropdown.Item>
@@ -51,8 +52,14 @@ class Pagamento extends Component{
                             <Dropdown.Item  >Novembro</Dropdown.Item>
                             <Dropdown.Item  >Dezembro</Dropdown.Item>
                         </DropdownButton>
+                        
                         <FormControl placeholder="{this.state.month}" aria-describedby="basic-addon1" />
-                    
+                        &nbsp;&nbsp;&nbsp;
+                        <DropdownButton as={InputGroup.Prepend} variant="outline-secondary"  title="Dia" id="input-group-dropdown-1" >
+                            <Dropdown.Item  >2018</Dropdown.Item>
+                            <Dropdown.Item  >2019</Dropdown.Item>
+                        </DropdownButton>
+                        < FormControl aria-describedby="basic-addon1"  placeholder="{this.state.year}"/>
                         
                     </InputGroup>
                </div>
@@ -61,17 +68,10 @@ class Pagamento extends Component{
 
             <div className="divisao_input">
             <div className="form-group forf">
+                
                 <div className="form-group forf">
-                <label>Transferência: &nbsp;</label>
-                    <label class="switch">
-                        <input type="checkbox"/>
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                &nbsp; &nbsp; &nbsp;
-                <div className="form-group forf">
-                {/* TRAVAR TUDO QUANDO BOTAR ISENTO */}
-                <label>Isento: &nbsp;</label> 
+            
+                <label>FOTO (COLOCAR INPUT DPS) &nbsp;</label> 
                     <label class="switch">
                         <input type="checkbox"/>
                         <span class="slider round"></span>
@@ -99,4 +99,4 @@ class Pagamento extends Component{
 
 
 
-export {Pagamento}
+export {Compras}
