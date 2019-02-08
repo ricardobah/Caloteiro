@@ -15,17 +15,21 @@ class Home extends Component{
         
         }
     }
-       setStateMonth(asd){
-       console.log(asd);
+       setStateMonth(Month){
+    //    console.log(asd);
         this.setState({
-            month:asd
+            month:Month
         });
     }
 
-    setStateYear(asd){
-        console.log(asd);
+    fillTable(month,year){
+        console.log(month+year) //TODO pegar dados do banco para jogar na tabela
+    }
+
+    setStateYear(Year){
+        // console.log(asd);
          this.setState({
-             year:asd
+             year:Year
          });
      }
 
@@ -81,7 +85,7 @@ class Home extends Component{
                     aria-describedby="basic-addon1"
                     />
                     &nbsp;&nbsp;&nbsp;
-                    <Button>Buscar</Button>
+                    <Button onClick={()=>this.fillTable(this.state.month, this.state.year)}>Buscar</Button>
                 </InputGroup>
 
                
