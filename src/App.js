@@ -6,6 +6,7 @@ import {Home} from './home.js'
 import {Pagamento} from './pagamentos.js'
 import {Compras} from './CadastroCompras.js'
 import {Caixa} from './caixa.js'
+import {Solicitacoes} from './solicitacoes.js'
 class App extends Component {
   render() {
     return (
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path ='/pagamentos' component={Pagamento}/> 
             <Route exact path ='/compras' component={Compras}/> 
             <Route exact path ='/caixa' component={Caixa}/> 
+            <Route exact path ='/solicitacoes' component={Solicitacoes}/> 
         </div>
       </Router>
     );
@@ -48,7 +50,7 @@ class MainHeader extends Component{
       </Nav.Item>
 
       <Nav.Item style={li}>
-        <Nav.Link href="/solicitacos">Solicitações</Nav.Link>     
+        <Nav.Link href="/solicitacoes">Solicitações</Nav.Link>     
       </Nav.Item>
       <Nav.Item style={li}>
     
