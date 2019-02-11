@@ -45,7 +45,7 @@ class Caixa extends Component{
                         <h3><font color="green">Entradas: 100</font></h3>
                         <h3><font color="red">Saidas: 85</font></h3>
                         <br/>
-                        <h3><font color="green">Resultado: 15</font></h3>
+                        <h3><font color="green">Total: 15</font></h3>
                         <br/><br/><br/> <br/><br/><br/> <br/>
                     </div>
                     <div className="col-6">

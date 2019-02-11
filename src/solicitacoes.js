@@ -17,7 +17,7 @@ class Solicitacoes extends Component{
                 <br/>   
                   <h1>Solicitações</h1>
                 <br/>
-                
+                <form action="/home"> 
                     <label>Solicitante:</label><br/>
                     <input type="text"/><br/>
                     <br/>
@@ -26,7 +26,8 @@ class Solicitacoes extends Component{
                         Quero tortinha de morango
                     </textarea><br/>
                     <br/>
-                    <Button className="btn-success">Send</Button>
+                    <Button  type="submit"  className="btn-success">Send</Button>
+                    </form>
             </div>
 
 

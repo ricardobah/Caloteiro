@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './switch.css'
 import {DatePickerCompras} from './DatePicker.js'
+import {ImageUpload} from './ImageUploader.js'
 class Compras extends Component{
     constructor(props){
         super(props)
@@ -40,45 +41,19 @@ class Compras extends Component{
             <div className="divisao_input">
                 <label>Data: &nbsp;</label>
                 <div className="form-group forf">
-                    {/* <InputGroup className="mb-3 col-md-6 ">
-                    
-                        <DropdownButton as={InputGroup.Prepend} variant="outline-secondary"  title="Ano" id="input-group-dropdown-1" >
-                            <Dropdown.Item  >2018</Dropdown.Item>
-                            <Dropdown.Item  >2019</Dropdown.Item>
-                        </DropdownButton>
-                        < FormControl aria-describedby="basic-addon1"  placeholder="{this.state.year}"/>
-                        &nbsp;&nbsp;&nbsp;
-                        <DropdownButton as={InputGroup.Prepend} variant="outline-secondary" title="Mês" id="input-group-dropdown-1">
-                            <Dropdown.Item  >Outubro</Dropdown.Item>
-                            <Dropdown.Item  >Novembro</Dropdown.Item>
-                            <Dropdown.Item  >Dezembro</Dropdown.Item>
-                        </DropdownButton>
-                        
-                        <FormControl placeholder="{this.state.month}" aria-describedby="basic-addon1" />
-                        &nbsp;&nbsp;&nbsp;
-                        <DropdownButton as={InputGroup.Prepend} variant="outline-secondary"  title="Dia" id="input-group-dropdown-1" >
-                            <Dropdown.Item  >2018</Dropdown.Item>
-                            <Dropdown.Item  >2019</Dropdown.Item>
-                        </DropdownButton>
-                        < FormControl aria-describedby="basic-addon1"  placeholder="{this.state.year}"/>
-                        
-                    </InputGroup> */}
+                   
                     <DatePickerCompras/>
                </div>
             </div>
           
 
             <div className="divisao_input">
+                  <label>Foto:</label>
             <div className="form-group forf">
+                  <InputGroup className="mb-3 col-md-3 ">
+                     <ImageUpload/>
+                  </InputGroup>
                 
-                <div className="form-group forf">
-            
-                <label>FOTO (COLOCAR INPUT DPS) &nbsp;</label> 
-                    <label class="switch">
-                        <input type="checkbox"/>
-                        <span class="slider round"></span>
-                    </label>
-                </div>
               </div>  
             </div>
 

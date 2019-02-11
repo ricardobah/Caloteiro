@@ -1,15 +1,36 @@
 import React,{Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './switch.css'
+import {DatePickerCompras} from './DatePicker.js'
+import { ImageUpload} from './ImageUploader.js'
 class Pagamento extends Component{
     constructor(props){
         super(props)
     
         this.state = {
-          isLoading: false
+          isLoading: false,
+          transfer: false
+        }
+    }
+
+    switchTransferencia(){
+        
+        if(this.state.transfer){
+            console.log(this.state.transfer)
+            this.setState({ transfer:false });
+        }else{
+            console.log(this.state.transfer)
+            this.setState({ transfer:true });
+            
         }
     }
     
+    // transferencia(){
+    //     if(this.state.transfer){
+    //         console.log(this.state.transfer)
+    //         return (<div><ImageUpload/> <br/></div>)
+    //     }
+    // }
 
     render(){
         return(
@@ -39,7 +60,7 @@ class Pagamento extends Component{
             <div className="divisao_input">
                 <label>Data: &nbsp;</label>
                 <div className="form-group forf">
-                    <InputGroup className="mb-3 col-md-4 ">
+                    {/* <InputGroup className="mb-3 col-md-4 ">
                         <DropdownButton as={InputGroup.Prepend} variant="outline-secondary"  title="Ano" id="input-group-dropdown-1" >
                             <Dropdown.Item  >2018</Dropdown.Item>
                             <Dropdown.Item  >2019</Dropdown.Item>
@@ -54,7 +75,8 @@ class Pagamento extends Component{
                         <FormControl placeholder="{this.state.month}" aria-describedby="basic-addon1" />
                     
                         
-                    </InputGroup>
+                    </InputGroup> */}
+                    <DatePickerCompras/>
                </div>
             </div>
           
@@ -64,10 +86,12 @@ class Pagamento extends Component{
                 <div className="form-group forf">
                 <label>Transferência: &nbsp;</label>
                     <label class="switch">
-                        <input type="checkbox"/>
+                        <input onClick={()=>this.switchTransferencia()} type="checkbox"/>
                         <span class="slider round"></span>
                     </label>
                 </div>
+                
+                
                 &nbsp; &nbsp; &nbsp;
                 <div className="form-group forf">
                 {/* TRAVAR TUDO QUANDO BOTAR ISENTO */}
@@ -78,8 +102,9 @@ class Pagamento extends Component{
                     </label>
                 </div>
               </div>  
+              { this.state.transfer ? <div><ImageUpload/><br/></div> : null }
+              {/* {()=>this.transferencia}  */}
             </div>
-
                 <Button type="submit" className="btn-success">Pagar</Button>
           
                 </form>
