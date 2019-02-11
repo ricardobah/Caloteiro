@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './switch.css'
+import {DatePickerCompras} from './DatePicker.js'
 class Compras extends Component{
     constructor(props){
         super(props)
@@ -37,9 +38,9 @@ class Compras extends Component{
                 </div>
             </div>
             <div className="divisao_input">
-                <label>Data (TROCAR POR DATE PICKER): &nbsp;</label>
+                <label>Data: &nbsp;</label>
                 <div className="form-group forf">
-                    <InputGroup className="mb-3 col-md-6 ">
+                    {/* <InputGroup className="mb-3 col-md-6 ">
                     
                         <DropdownButton as={InputGroup.Prepend} variant="outline-secondary"  title="Ano" id="input-group-dropdown-1" >
                             <Dropdown.Item  >2018</Dropdown.Item>
@@ -61,7 +62,8 @@ class Compras extends Component{
                         </DropdownButton>
                         < FormControl aria-describedby="basic-addon1"  placeholder="{this.state.year}"/>
                         
-                    </InputGroup>
+                    </InputGroup> */}
+                    <DatePickerCompras/>
                </div>
             </div>
           
