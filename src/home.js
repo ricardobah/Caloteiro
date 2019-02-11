@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Table} from'./table.js'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './home.css'
-
+import {Animation} from './Animation.js'
 
 class Home extends Component{
     constructor(props){
@@ -95,7 +95,7 @@ class Home extends Component{
               
                 </div>
                 <Table/>
-            
+                <Animation/>
 
             </div>
         );
