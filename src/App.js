@@ -7,18 +7,25 @@ import {Pagamento} from './pagamentos.js'
 import {Compras} from './CadastroCompras.js'
 import {Caixa} from './caixa.js'
 import {Solicitacoes} from './solicitacoes.js'
+import anime from 'animejs';
+
+
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-            <MainHeader/>
-            <Route exact path ='/' component={Home}/>
-            <Route exact path ='/home' component={Home}/> 
-            <Route exact path ='/pagamentos' component={Pagamento}/> 
-            <Route exact path ='/compras' component={Compras}/> 
-            <Route exact path ='/caixa' component={Caixa}/> 
-            <Route exact path ='/solicitacoes' component={Solicitacoes}/> 
+          <MainHeader/>
+          <Route exact path ='/' component={Home}/>
+          <Route exact path ='/home' component={Home}/> 
+          <Route exact path ='/pagamentos' component={Pagamento}/> 
+          <Route exact path ='/compras' component={Compras}/> 
+          <Route exact path ='/caixa' component={Caixa}/> 
+          <Route exact path ='/solicitacoes' component={Solicitacoes}/> 
+           
+          <section>
+
+          </section>
         </div>
       </Router>
     );

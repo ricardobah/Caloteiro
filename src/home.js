@@ -3,6 +3,15 @@ import {Table} from'./table.js'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './home.css'
 import {Animation} from './Animation.js'
+import anime from 'animejs';
+anime({
+  // targets: 'div',
+  // rotate: '1turn',
+  // duration: 3800
+  targets: '.css-selector-demo .el',
+  translateX: 250
+
+});
 
 class Home extends Component{
     constructor(props){
@@ -34,10 +43,16 @@ class Home extends Component{
      }
 
     render(){
-
-        
+       
+        anime({
+            targets: 'div',
+            rotate: '1turn',
+            duration: 3800
+          
+          
+          });
         return(
-            <div>
+            <div className="anima">
                 <br/>
                 <h2>Caloteiros</h2>
                 <br/>
@@ -95,8 +110,6 @@ class Home extends Component{
               
                 </div>
                 <Table/>
-                <Animation/>
-
             </div>
         );
 
