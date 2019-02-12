@@ -3,6 +3,8 @@ import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-boots
 import './switch.css'
 import {DatePickerCompras} from './DatePicker.js'
 import { ImageUpload} from './ImageUploader.js'
+import App from './App';
+import {Link} from 'react-router-dom'
 class Pagamento extends Component{
     constructor(props){
         super(props)
@@ -24,6 +26,22 @@ class Pagamento extends Component{
             
         }
     }
+
+    play(){
+    
+        var audio = document.getElementById("audio");
+        if(audio!=null){
+          console.log("aaaaaaa")
+        if(!this.state.Play ){
+          audio.play();
+          this.setState({Play:true})
+        }else{
+    
+            audio.pause();
+            this.setState({Play:false})
+          }
+        }
+      }
     
     // transferencia(){
     //     if(this.state.transfer){
@@ -39,7 +57,7 @@ class Pagamento extends Component{
                 <br/>
                     <h2>Receita Federal</h2>
                 <br/>
-            <form action="/home"> 
+            
             {/* lembrar do post e name dos inputs */}
             <div className="divisao_input">
                 <label>Nome: &nbsp;</label>
@@ -105,9 +123,10 @@ class Pagamento extends Component{
               { this.state.transfer ? <div><ImageUpload/><br/></div> : null }
               {/* {()=>this.transferencia}  */}
             </div>
-                <Button type="submit" className="btn-success">Pagar</Button>
+            <Link to="/home/play"> 
+                <Button type="button" onClick={()=>this.play()} className="btn-success">Pagar</Button>
           
-                </form>
+                </Link>
 
         </div>
 

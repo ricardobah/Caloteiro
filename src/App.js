@@ -7,33 +7,83 @@ import {Pagamento} from './pagamentos.js'
 import {Compras} from './CadastroCompras.js'
 import {Caixa} from './caixa.js'
 import {Solicitacoes} from './solicitacoes.js'
-import anime from 'animejs';
+import anime from 'animejs'
+
 
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      Play:false
+    
+    }
+}
+  play(){
+    
+    var audio = document.getElementById("audio");
+    if(audio!=null){
+      console.log("aaaaaaa")
+    if(!this.state.Play ){
+      audio.play();
+      this.setState({Play:true})
+    }else{
+
+        audio.pause();
+        this.setState({Play:false})
+      }
+    }
+  }
   render() {
     return (
       <Router>
         <div className="App">
+          <audio id="audio" src="/TiroPart.mp3" ></audio>
           <MainHeader/>
           <Route exact path ='/' component={Home}/>
-          <Route exact path ='/home' component={Home}/> 
+          <Route path ='/home/' component={Home}/> 
+          <Route exact path ='/home/play' component={  pagou}  render={ this.play()}/>
           <Route exact path ='/pagamentos' component={Pagamento}/> 
           <Route exact path ='/compras' component={Compras}/> 
           <Route exact path ='/caixa' component={Caixa}/> 
           <Route exact path ='/solicitacoes' component={Solicitacoes}/> 
-           
-          <section>
-
-          </section>
+          
         </div>
       </Router>
     );
   }
 }
 
-class MainHeader extends Component{
+class pagou extends Component{
 
+render(){
+return(  <audio id="audio" src="/TiroPart.mp3" ></audio>);
+
+}
+
+}
+
+
+class MainHeader extends Component{
+  constructor(props){
+    super(props)
+
+    this.state = {
+      Play:false
+    
+    }
+}
+   play(){
+    var audio = document.getElementById("audio");
+    if(!this.state.Play){
+      audio.play();
+      this.setState({Play:true})
+    }else{
+      audio.pause();
+      this.setState({Play:false})
+    }
+  }
   render(){
 
     return(
@@ -66,6 +116,16 @@ class MainHeader extends Component{
         </Nav.Link>
         
       </Nav.Item>
+     
+
+      <Nav.Item style={li}>
+        <Nav.Link onClick={() => this.play()} className="text-success" >
+        ♫ Play 
+        </Nav.Link>
+      
+    
+      </Nav.Item>
+      
     </Nav>
 
 
