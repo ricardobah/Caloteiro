@@ -7,6 +7,9 @@ import ReactEcharts from 'echarts-for-react';
  
 // render echarts option.
 
+
+
+
 class Caixa extends Component{
     
     constructor(props){
@@ -46,6 +49,10 @@ class Caixa extends Component{
                         <h3><font color="red">Saidas: 85</font></h3>
                         <br/>
                         <h3><font color="green">Total: 15</font></h3>
+                        <div className="slidecontainer">
+                          <input type="range" min="1" max="12"  className="slider" onClick={()=> this.slider()} id="myRange"/>
+                        <div id="demo"></div>
+                        </div>
                         <br/><br/><br/> <br/><br/><br/> <br/>
                     </div>
                     <div className="col-6">
@@ -64,13 +71,140 @@ class Caixa extends Component{
                     </div>
                 </div>
 
-
+                
             </div>
 
 
         );
     }
 
+
+    slider(){
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        ///
+        
+        // switch(this.value){
+        //     case "1":
+        //     console.log("asd")
+        //     slider.setAttribute("value","Janeiro") 
+        //     break;
+        //     case 2:
+        //     console.log("asd1")
+        //     slider.value = "Fevereiro"; 
+        //     break;
+        //     case 3:
+        //     console.log("asd2")
+        //     slider.value = "Março"; 
+        //     break;
+        //     case 4:
+        //     console.log("asd3")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 5:
+        //     console.log("asd4")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 6:
+        //     console.log("asd5")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 7:
+        //     console.log("asd6")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 8:
+        //     console.log("asd7")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 9:
+        //     console.log("asd8")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 10:
+        //     console.log("asd9")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 11:
+        //     console.log("asd11")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     case 12:
+        //     console.log("asd12")
+        //     output.innerHTML = this.value; 
+        //     break;
+        //     default:
+        //     console.log( typeof this.value)
+        //     output.innerHTML = this.value; 
+        //     break;
+        // }
+        ///
+        // Display the default slider value
+            
+            slider.oninput = function() {
+              
+             output.innerHTML = "this.value";
+             switch(this.value){
+                case "1":
+                
+                output.innerHTML ="Janeiro"
+                break;
+                case "2":
+               
+                output.innerHTML =  "Fevereiro"; 
+                break;
+                case "3":
+               
+                output.innerHTML = "Março"; 
+                break;
+                case "4":
+           
+                output.innerHTML = "Abril"; 
+                break;
+                case "5":
+               
+                output.innerHTML ="Maio"; 
+                break;
+                case "6":
+                
+                output.innerHTML ="Junho";
+                break;
+                case "7":
+               
+                output.innerHTML = "Julho";
+                break;
+                case "8":
+               
+                output.innerHTML = "Agosto";
+                break;
+                case "9":
+               
+                output.innerHTML = "Setembro";
+                break;
+                case "10":
+               
+                output.innerHTML = "Outubro";
+                break;
+                case "11":
+               
+                output.innerHTML = "Novembro";
+                break;
+                case "12":
+               
+                output.innerHTML = "Dezembro";
+                break;
+                default:
+              
+                output.innerHTML = this.value; 
+                break;
+            }
+            }
+
+       
+        
+        // Update the current slider value (each time you drag the slider handle)
+
+    }
 
 
 }
