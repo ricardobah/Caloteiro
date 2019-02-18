@@ -46,11 +46,7 @@ class Caixa extends Component{
                         <h3><font color="red">Saidas: 85</font></h3>
                         <br/>
                         <h3><font color="green">Total: 15</font></h3>
-                        <br/><br/>
-                        <button className="btn btn-success">2018</button> &nbsp;
-                        <button className="btn btn-success">2019</button> &nbsp;
-                        <button className="btn btn-success">2020</button><br/><br/>
-                        <button className="btn btn-success">2018</button> &nbsp;
+                        <br/><br/><br/> <br/><br/><br/> <br/>
                     </div>
                     <div className="col-6">
                         <h3>Gráfico</h3>
