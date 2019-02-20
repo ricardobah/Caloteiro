@@ -1,0 +1,1 @@
+Apenas testando configurações do linux e manipulação de arquivos+git na partição de dados
