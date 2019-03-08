@@ -1,6 +1,6 @@
 import { login_sucess } from '../actions/actionTypes';
 const initialState = {
-    newValue: ''
+    newValue: 'b'
   };
   
   export const loginReducer = (state = initialState, action) => {
@@ -9,6 +9,7 @@ const initialState = {
         return {
           ...state,
           newValue: action.newValue
+          // newValue: action.newValue
         };
       default:
         return state;

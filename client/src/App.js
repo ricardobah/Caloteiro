@@ -9,9 +9,17 @@ import {Caixa} from './caixa.jsx'
 import {Solicitacoes} from './solicitacoes.jsx'
 import {loginPage} from './loginPage.jsx'
 import {Cadastro} from './cadastro.jsx'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { loginSucess } from './actions';
+
+
 
 
 class App extends Component {
+
+  
+
   constructor(props){
     super(props)
 
@@ -21,6 +29,15 @@ class App extends Component {
     
     }
 }
+
+loginEvent = event => {
+  this.setState({
+    logado: event.target.value
+  })
+}
+
+
+
   play(){
     
     var audio = document.getElementById("audio");
@@ -75,11 +92,13 @@ ativo
     
     
     render() {
+      const { loginButton } = this.props;
       return (
         <Router>
         <div className="App">
           <audio id="audio" src="/TiroPart.mp3" ></audio>
           <MainHeader/>
+        
           <Route exact path ='/' component={this.componentManager("loginPage")}/>
           
           <Route path ='/home/' component={this.componentManager("home")}/> 
@@ -89,6 +108,9 @@ ativo
           <Route exact path ='/caixa' component={this.componentManager("Caixa")}/> 
           <Route exact path ='/solicitacoes' component={this.componentManager("Solicitacoes")}/> 
           <Route exact path ='/cadastro' component={this.componentManager("Cadastro")}/> 
+          <button onClick={() => loginButton("inputValue")}>
+          Click me!
+        </button>
         </div>
       </Router>
     );
@@ -214,8 +236,11 @@ const a = {
 }
 
 
-
-
-export default App;
+const mapStateToProps = store => ({
+  newValue: store.loginState.newValue
+});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ loginSucess }, dispatch);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 

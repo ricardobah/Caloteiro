@@ -1,6 +1,6 @@
 import { login_sucess } from '../actions/actionTypes';
 
-export const clickButton = value => ({
+export const loginSucess = value => ({
     type: login_sucess,
     newValue: value
   });
