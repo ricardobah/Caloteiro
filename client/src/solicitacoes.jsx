@@ -18,9 +18,7 @@ class Solicitacoes extends Component{
                   <h1>Solicitações</h1>
                 <br/>
                 <form action="/home"> 
-                    <label>Solicitante:</label><br/>
-                    <input type="text"/><br/>
-                    <br/>
+                   
                     <label>Solicitação:</label><br/>
                     <textarea rows="4" cols="50">
                         Quero tortinha de morango

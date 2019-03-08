@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 
-class loginPage extends Component{
+class Cadastro extends Component{
 
 
     render(){
@@ -11,13 +11,21 @@ class loginPage extends Component{
                 <div>
                     <br/>
                     <h1>
-                        Login
+                        Cadastro
                     </h1><br/>
+                    <div className="divisao_input">
+                        <label>Nome: &nbsp;</label>
+                        <div className="form-group forf">
+                            <InputGroup className="mb-3 col-md-3 ">
+                                <FormControl aria-describedby="basic-addon1"  placeholder="Nome"/>
+                            </InputGroup>
+                        </div>
+                    </div>
                     <div className="divisao_input">
                         <label>Usuário: &nbsp;</label>
                         <div className="form-group forf">
                             <InputGroup className="mb-3 col-md-3 ">
-                                <FormControl aria-describedby="basic-addon1"  placeholder="Nome"/>
+                                <FormControl aria-describedby="basic-addon1"  placeholder="Usuário"/>
                             </InputGroup>
                         </div>
                     </div>
@@ -29,9 +37,8 @@ class loginPage extends Component{
                             </InputGroup>
                         </div>
                     </div>
-                    <Button type="submit" className="btn">Logar</Button>
-                    <br/><br/><br/><br/>
-                    <a href="cadastro">Cadastro</a>
+                    <Button type="submit" className="btn">Cadastrar</Button>
+                    
                 </div>
                 
             
@@ -43,4 +50,4 @@ class loginPage extends Component{
 
 }
 
-export {loginPage}
+export {Cadastro}

@@ -7,8 +7,8 @@ import {Pagamento} from './pagamentos.jsx'
 import {Compras} from './CadastroCompras.jsx'
 import {Caixa} from './caixa.jsx'
 import {Solicitacoes} from './solicitacoes.jsx'
-
-
+import {loginPage} from './loginPage.jsx'
+import {Cadastro} from './cadastro.jsx'
 
 
 class App extends Component {
@@ -16,7 +16,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      Play:false
+      Play:false,
+      logado:null
     
     }
 }
@@ -35,20 +36,54 @@ class App extends Component {
       }
     }
   }
+ 
+/*
+usuario
+senha
+mes de cadastro
+nome
+saldo
+ativo
+*/
+
+  componentManager(name){
+      switch(name){
+        case "home":
+          return Home
+        case "loginPage":
+          return loginPage
+        case "pagou":
+          return pagou
+        case "Pagamento":
+          return Pagamento
+        case "Compras":
+          return Compras
+        case "Caixa":
+          return Caixa
+        case "Solicitacoes":
+          return Solicitacoes
+        case "Cadastro":
+          return Cadastro
+
+      }
+  }
+
+
   render() {
     return (
       <Router>
         <div className="App">
           <audio id="audio" src="/TiroPart.mp3" ></audio>
           <MainHeader/>
-          <Route exact path ='/' component={Home}/>
-          <Route path ='/home/' component={Home}/> 
-          <Route exact path ='/home/play' component={  pagou}  render={ this.play()}/>
-          <Route exact path ='/pagamentos' component={Pagamento}/> 
-          <Route exact path ='/compras' component={Compras}/> 
-          <Route exact path ='/caixa' component={Caixa}/> 
-          <Route exact path ='/solicitacoes' component={Solicitacoes}/> 
+          <Route exact path ='/' component={this.componentManager("loginPage")}/>
           
+          <Route path ='/home/' component={this.componentManager("home")}/> 
+          <Route exact path ='/home/play' component={this.componentManager("pagou")}  render={ this.play()}/>
+          <Route exact path ='/pagamentos' component={this.componentManager("Pagamento")}/> 
+          <Route exact path ='/compras' component={this.componentManager("Compras")}/> 
+          <Route exact path ='/caixa' component={this.componentManager("Caixa")}/> 
+          <Route exact path ='/solicitacoes' component={this.componentManager("Solicitacoes")}/> 
+          <Route exact path ='/cadastro' component={this.componentManager("Cadastro")}/> 
         </div>
       </Router>
     );
@@ -57,10 +92,10 @@ class App extends Component {
 
 class pagou extends Component{
 
-render(){
-return(  <audio id="audio" src="/TiroPart.mp3" ></audio>);
+  render(){
+  return(  <audio id="audio" src="/TiroPart.mp3" ></audio>);
 
-}
+  }
 
 }
 
@@ -97,7 +132,7 @@ class MainHeader extends Component{
           <Nav.Link href="/home">Home</Nav.Link>     
       </Nav.Item>
       <Nav.Item style={li}>  
-        <Nav.Link href="/pagamentos">Pagamentos</Nav.Link>   
+        <Nav.Link href="/pagamentos">Pagamento</Nav.Link>   
       </Nav.Item>
       <Nav.Item style={li}>
         <Nav.Link href="/compras">Compras</Nav.Link>       
@@ -121,6 +156,13 @@ class MainHeader extends Component{
       <Nav.Item style={li}>
         <Nav.Link onClick={() => this.play()} className="text-success" >
         ♫ Play 
+        </Nav.Link>
+      
+    
+      </Nav.Item>
+      <Nav.Item style={li}>
+        <Nav.Link onClick={() => this.play()} className="text-danger" >
+          Sair
         </Nav.Link>
       
     

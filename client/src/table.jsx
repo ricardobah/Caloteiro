@@ -35,6 +35,7 @@ render(){
     <th  style = {thd}>Nome</th>
    
     <th style = {thd}>Pagamento</th>
+    <th style = {thd}>Saldo</th>
     <th style = {thd}>Serasa</th>
   </tr>
 </thead>
@@ -44,16 +45,19 @@ render(){
 
     <td>  <font size="3" color="green">Cabeça</font></td>
  
-    <td>  <font size="3" color="green">-100</font></td>
+    <td>  <font size="3" color="black">0</font></td>
+    <td>  <font size="3" color="green">100</font></td>
     <td>  <span className="glyphicon glyphicon-play text-success">Pago</span></td>
   </tr>
   <tr>
   <td>  <font size="3" color="red">Anderson</font></td>
-  <td>  <font size="3" color="red">15</font></td>
+  <td>  <font size="3" color="black">0</font></td>
+  <td>  <font size="3" color="red">-15</font></td>
   <td>  <span className="glyphicon glyphicon-play text-danger">Caloteiro!</span></td>
   </tr>
   <tr>
   <td>  <font size="3" color="green">Ricardo</font></td>
+  <td>  <font size="3" color="black">0</font></td>
   <td>  <font size="3" color="green">0</font></td>
   <td>  <span className="glyphicon glyphicon-play text-success">Pago</span></td>
   </tr>

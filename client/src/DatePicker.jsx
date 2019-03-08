@@ -26,6 +26,7 @@ class DatePickerCompras extends React.Component {
       <DatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
+        dateFormat="dd/MM/yyyy"
       />
     );
   }
