@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Table} from'./table.js'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './home.css'
-import {Animation} from './Animation.js'
+
 import anime from 'animejs';
 anime({
   // targets: 'div',
@@ -44,13 +44,7 @@ class Home extends Component{
 
     render(){
        
-        anime({
-            targets: 'div',
-            rotate: '1turn',
-            duration: 3800
-          
-          
-          });
+    
         return(
             <div className="anima">
                 <br/>

@@ -7,7 +7,7 @@ import {Pagamento} from './pagamentos.js'
 import {Compras} from './CadastroCompras.js'
 import {Caixa} from './caixa.js'
 import {Solicitacoes} from './solicitacoes.js'
-import anime from 'animejs'
+
 
 
 
