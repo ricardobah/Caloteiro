@@ -90,9 +90,10 @@ ativo
     }
   }
     
-    
-    render() {
-      const { loginButton } = this.props;
+  
+  render() {
+    const { loginSucess, logado}= this.props;
+    const {logado} = this.state;
       return (
         <Router>
         <div className="App">
@@ -102,19 +103,28 @@ ativo
           <Route exact path ='/' component={this.componentManager("loginPage")}/>
           
           <Route path ='/home/' component={this.componentManager("home")}/> 
-          <Route exact path ='/home/play' component={this.componentManager("pagou")}  render={ this.play()}/>
+          {/* <Route exact path ='/home/play' component={this.componentManager("pagou")}  render={ this.play()}/> */}
           <Route exact path ='/pagamentos' component={this.componentManager("Pagamento")}/> 
           <Route exact path ='/compras' component={this.componentManager("Compras")}/> 
           <Route exact path ='/caixa' component={this.componentManager("Caixa")}/> 
           <Route exact path ='/solicitacoes' component={this.componentManager("Solicitacoes")}/> 
           <Route exact path ='/cadastro' component={this.componentManager("Cadastro")}/> 
-          <button onClick={() => loginButton("inputValue")}>
+          <button onClick={() => loginSucess(logado)}> 
+          {/* loginButton("inputValue") */}
           Click me!
         </button>
         </div>
       </Router>
     );
+
   }
+  teste(){
+console.log(this.props)
+
+
+console.log(loginSucess)
+  }
+
 }
 
 class pagou extends Component{
@@ -125,6 +135,7 @@ class pagou extends Component{
   }
 
 }
+
 
 
 class MainHeader extends Component{
