@@ -13,6 +13,7 @@ class loginPage extends Component{
                     <h1>
                         Login
                     </h1><br/>
+                    <form action="/home"> 
                     <div className="divisao_input">
                         <label>Usuário: &nbsp;</label>
                         <div className="form-group forf">
@@ -30,6 +31,7 @@ class loginPage extends Component{
                         </div>
                     </div>
                     <Button type="submit" className="btn">Logar</Button>
+                    </form>
                     <br/><br/><br/><br/>
                     <a href="cadastro">Cadastro</a>
                 </div>

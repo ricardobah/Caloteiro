@@ -47,31 +47,36 @@ ativo
 */
 
   componentManager(name){
+    if(this.state.logado!=null){
+
       switch(name){
         case "home":
-          return Home
+        return Home
         case "loginPage":
-          return loginPage
+        return loginPage
         case "pagou":
-          return pagou
+        return pagou
         case "Pagamento":
-          return Pagamento
+        return Pagamento
         case "Compras":
-          return Compras
+        return Compras
         case "Caixa":
-          return Caixa
+        return Caixa
         case "Solicitacoes":
-          return Solicitacoes
+        return Solicitacoes
         case "Cadastro":
-          return Cadastro
-
+        return Cadastro
+        
       }
+    }else{
+      return loginPage
+    }
   }
-
-
-  render() {
-    return (
-      <Router>
+    
+    
+    render() {
+      return (
+        <Router>
         <div className="App">
           <audio id="audio" src="/TiroPart.mp3" ></audio>
           <MainHeader/>
