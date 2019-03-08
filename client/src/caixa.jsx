@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './switch.css'
-import {getOption} from './chart.js'
+import {getOption} from './chart.jsx'
 import './caixa.css'
 import ReactEcharts from 'echarts-for-react';
  

@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './switch.css'
-import {DatePickerCompras} from './DatePicker.js'
+import {DatePickerCompras} from './DatePicker.jsx'
 import {ImageUpload} from './ImageUploader.js'
 class Compras extends Component{
     constructor(props){

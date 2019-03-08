@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 import { Nav, Button } from 'react-bootstrap';
 import './App.css';
-import {Home} from './home.js'
-import {Pagamento} from './pagamentos.js'
-import {Compras} from './CadastroCompras.js'
-import {Caixa} from './caixa.js'
-import {Solicitacoes} from './solicitacoes.js'
+import {Home} from './home.jsx'
+import {Pagamento} from './pagamentos.jsx'
+import {Compras} from './CadastroCompras.jsx'
+import {Caixa} from './caixa.jsx'
+import {Solicitacoes} from './solicitacoes.jsx'
 
 
 

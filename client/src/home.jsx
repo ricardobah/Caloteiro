@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Table} from'./table.js'
+import {Table} from'./table.jsx'
 import {Dropdown,InputGroup,DropdownButton,FormControl,Button} from 'react-bootstrap'
 import './home.css'
 
